@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="TaskManager\BaseTaskManager.cpp">
+      <Filter>TaskManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\LogUtil.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\Framework.cpp" />
+    <ClCompile Include="TaskManager\UserManager.cpp">
+      <Filter>TaskManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Unit\UserUnit.cpp">
+      <Filter>Unit</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskManager\RoomManager.cpp">
+      <Filter>TaskManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Unit\RoomUnit.cpp">
+      <Filter>Unit</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="TaskManager">
+      <UniqueIdentifier>{0998a260-1108-4fad-a1d8-fa03576de500}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{7dbd25cd-5d2b-4042-b552-0a6b07533d82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Unit">
+      <UniqueIdentifier>{6ad79da4-9baa-458f-9ffd-69bafd229979}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TaskManager\BaseTaskManager.h">
+      <Filter>TaskManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\LogUtil.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Framework.h" />
+    <ClInclude Include="TaskManager\UserManager.h">
+      <Filter>TaskManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Unit\UserUnit.h">
+      <Filter>Unit</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskManager\RoomManager.h">
+      <Filter>TaskManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Unit\RoomUnit.h">
+      <Filter>Unit</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\AutoCall.hpp">
+      <Filter>Util</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Util\Singleton.hpp">
+      <Filter>Util</Filter>
+    </None>
+  </ItemGroup>
+</Project>
