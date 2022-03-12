@@ -147,23 +147,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Framework.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="TaskManager\BaseTaskManager.cpp" />
     <ClCompile Include="TaskManager\RoomManager.cpp" />
     <ClCompile Include="TaskManager\UserManager.cpp" />
     <ClCompile Include="Unit\RoomUnit.cpp" />
     <ClCompile Include="Unit\UserUnit.cpp" />
-    <ClCompile Include="Util\Framework.cpp" />
     <ClCompile Include="Util\LogUtil.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Framework.h" />
     <ClInclude Include="TaskManager\BaseTaskManager.h" />
     <ClInclude Include="TaskManager\RoomManager.h" />
     <ClInclude Include="TaskManager\UserManager.h" />
     <ClInclude Include="Unit\RoomUnit.h" />
     <ClInclude Include="Unit\UserUnit.h" />
     <ClInclude Include="Util\AutoCall.hpp" />
-    <ClInclude Include="Util\Framework.h" />
     <ClInclude Include="Util\LogUtil.h" />
   </ItemGroup>
   <ItemGroup>

@@ -8,7 +8,6 @@
     <ClCompile Include="Util\LogUtil.cpp">
       <Filter>Util</Filter>
     </ClCompile>
-    <ClCompile Include="Util\Framework.cpp" />
     <ClCompile Include="TaskManager\UserManager.cpp">
       <Filter>TaskManager</Filter>
     </ClCompile>
@@ -21,6 +20,7 @@
     <ClCompile Include="Unit\RoomUnit.cpp">
       <Filter>Unit</Filter>
     </ClCompile>
+    <ClCompile Include="Framework.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="TaskManager">
@@ -40,7 +40,6 @@
     <ClInclude Include="Util\LogUtil.h">
       <Filter>Util</Filter>
     </ClInclude>
-    <ClInclude Include="Util\Framework.h" />
     <ClInclude Include="TaskManager\UserManager.h">
       <Filter>TaskManager</Filter>
     </ClInclude>
@@ -56,6 +55,7 @@
     <ClInclude Include="Util\AutoCall.hpp">
       <Filter>Util</Filter>
     </ClInclude>
+    <ClInclude Include="Framework.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Util\Singleton.hpp">
