@@ -17,13 +17,14 @@ BaseTaskManager::BaseTaskManager()
 
 BaseTaskManager::~BaseTaskManager() = default;
 
-Base::AutoCall BaseTaskManager::Run()
+Base::AutoCallPtr BaseTaskManager::Run()
 {
 	m_taskThread = static_cast< std::jthread >(
 			[ this ]( std::stop_token stoken )
 			{
-				PRINT_LOG( "Run Task Manager! // Name : " + _GetName() + " ThreadId : " + Log::GetThreadIdString() );
-				
+				Log::AddThreadIdAndName( _GetName() );
+				PRINT_LOG_WITH_THREADID( "Run Task Manager! // Name : " + _GetName() );
+
 				while ( !stoken.stop_requested() )
 				{
 					_OnUpdate();
@@ -34,13 +35,15 @@ Base::AutoCall BaseTaskManager::Run()
 				}
 			} );
 
-	return Base::AutoCall( 
+	return Base::AutoCall::Make( 
 		[ & ]()
 		{ 
 			m_taskThread.request_stop();
 		
 			if ( m_taskThread.joinable() )
 				m_taskThread.join();
+
+			PRINT_LOG( "Stop! Task Manager! // Name : " + _GetName() );
 		} );
 }
 

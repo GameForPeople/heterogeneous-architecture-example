@@ -24,7 +24,7 @@ public:
 	BaseTaskManager();
 	virtual ~BaseTaskManager();
 
-	[[nodiscard]] Base::AutoCall Run();
+	[[nodiscard]] Base::AutoCallPtr Run();
 
 	void PushTask( const TaskType& task );
 

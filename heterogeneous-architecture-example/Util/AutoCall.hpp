@@ -12,7 +12,11 @@ namespace Base
 {
 	class AutoCall
 	{
-		const std::function< void() > func;
+	public:
+		[[nodiscard]] static std::shared_ptr< AutoCall > Make( const std::function< void() >& func )
+		{
+			return std::make_shared< AutoCall >( func );
+		}
 
 	public:
 		AutoCall( const std::function< void() >& func ) noexcept
@@ -24,5 +28,10 @@ namespace Base
 		{
 			if ( func ) { func(); }
 		}
+
+	private:
+		const std::function< void() > func;
 	};
+
+	using AutoCallPtr = std::shared_ptr< AutoCall >;
 }
